@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Courses</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+    <h1>Upload Course CSV</h1>
+
+    <div class="nav">
+        <a href="{{ url_for('index') }}">← Back to Courses</a>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash">
+          {% for msg in messages %}
+            <p>{{ msg }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" enctype="multipart/form-data" class="upload-form">
+        <label for="file">Choose CSV file:</label>
+        <input type="file" name="file" accept=".csv" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>

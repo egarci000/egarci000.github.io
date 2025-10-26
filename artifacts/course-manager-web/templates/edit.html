@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Course</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Edit Course</h1>
+
+    <div class="nav">
+        <a href="{{ url_for('index') }}">← Back to Courses</a>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash">
+          {% for msg in messages %}
+            <p>{{ msg }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" class="form-container">
+        <label for="course_title">Course Title:</label>
+        <input type="text" name="course_title" value="{{ course.course_title }}" required>
+
+        <label for="prerequisites">Prerequisites (comma-separated):</label>
+        <input type="text" name="prerequisites" value="{{ ', '.join(course.prerequisites) if course.prerequisites else '' }}">
+
+        <button type="submit" class="edit-save-btn">Save Changes</button>
+    </form>
+</body>
+</html>

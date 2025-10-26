@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SNHU Capstone ePortfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="heading-section">
+    <h1>Welcome to My Computer Science Capstone ePortfolio</h1>
+    <p>Hello, I’m Esteban Garcia, a Computer Science graduate from SNHU.</p>
+    <p>This portfolio highlights my work in software engineering and design, algorithms and data structures, and databases.</p>
+  </div>
+  
+
+   <details class="first-detail">
+    <summary><h2>Professional Self Assessment</h2></summary>
+    <div class="scroll-box">
+      <p>
+        Developing this ePortfolio gave me great insight into my abilities in programming and crafting a narrative on my skills as a programmer. The ePortfolio includes a simple web interface I built, where users can load school courses from a CSV file and display them on the page. They can edit courses, delete one or all courses, and export the courses to another CSV file. The program uses a MongoDB database to save the courses while the user’s session is active. It also gives them an option to connect to a database on their own local computer. In this way, my skills in working with databases are shown.  
+      </p>
+      <p>
+        I also created a starter command line interface app from where the web interface was created. Furthermore, I also built a mongo_crud file with the basic database CRUD operations like create, read, update and delete. Using this file, I was able to do the required database operations in both the web interface app and the much simpler CLI app.
+      </p>
+      <p>
+        By working on this application, I was able to sharpen my skills in data structures and algorithms. I was able to design an AVL tree in the CLI app that would take the courses a user loads from a CSV file and load them in the program temporarily. This AVL tree replaced the simpler binary tree that was originally implemented. This new data structure was able to load courses much faster and thus shows my ability to think of programs not only in their function but their speed as well, a category that can never be overlooked. I was also able to focus on app security concepts like proper error handling. Where appropriate, I designed error cases where if the program runs into an error, it does not return a default error message which could be exploited by bad actors, but a custom error message. This not only protects the app backend but also prevents the web from crashing, as the app will display the error message to the user but does not cause it to stop running. 
+      </p>
+      <p>
+        My artifact deals with important categories in computer science like software engineering and design, algorithms and data structures, and databases. I was able to design a fully functioning CLI app that allowed users to load courses from a CSV file, save them to a database, and print out course information. I was then able to take that design and build a fully functioning web app that allowed users to perform the same functions but in a front-end interface, with no need to perform command line operations in a terminal.  
+      </p>
+      <p>
+        I was able to implement algorithms and data structures by designing an AVL tree, which is a self-balancing tree that stores information. The difference between this self-balancing tree and an unbalanced tree like the one that was in the original program, is that because it self-balances, it creates a more streamlined way of saving the courses in memory, and thus it is faster and more efficient to load them to the user.  
+      </p>
+      <p>
+        As I pivoted to a web app, I replaced the AVL tree with storing courses in a database. This change was made because it provided several benefits, like scalability and data persistence. This change demonstrated scalability because the AVL tree could only handle as much data as the memory allowed. By replacing it with a database it allowed for more data to be loaded and be worked on. It had data persistence because it allowed for the course data to still be stored in the user session since it didn’t rely on volatile memory like the CLI app did. 
+      </p>
+      <p>
+        Completing my coursework throughout the program and developing this ePortoflio has given me greater confidence in my abilities as a programmer. It has helped me not only gain technical skills like debugging, research, creating faster algorithms and working with databases, but also soft skills like patience, and the ability to articulate technical concepts in a simpler way. This combination of technical and soft skills prepares me for a career where I can utilize these skills. A career in software or game development, Dev Ops, machine learning, data science, quantitative analysis, or the many other fields that utilize computer science. 
+      </p>
+    </div>
+  </details>
+
+  <details class="second-detail">
+  <summary><h2 style="display:inline;">Code Review of Original Artifact</h2></summary>
+  <div class="collapsable-container">
+    <video controls>
+      <source src="/assets/videos/code_review.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</details>
+
+  <details class="third-detail">
+  <summary><h2 style="display:inline;">Artifacts</h2></summary>
+  <div class="artifact-list collapsable-container">
+    <ul>
+      <li>
+        <a href="#" 
+           class="artifact-link"
+           data-github="https://github.com/egarci000/original-course-manager"
+           data-demo="">
+           Original Course Manager (CLI, C++)
+        </a>
+      </li>
+
+      <li>
+        <a href="#" 
+           class="artifact-link"
+           data-github="https://github.com/egarci000/enhanced-course-manager-cli"
+           data-demo="">
+           Enhanced Course Manager (CLI, Python)
+        </a>
+      </li>
+
+      <li>
+        <a href="#" 
+           class="artifact-link"
+           data-github="https://github.com/egarci000/course-manager-web"
+           data-demo="https://course-manager-web.onrender.com">
+           Enhanced Course Manager (Web, Flask + MongoDB)
+        </a>
+      </li>
+    </ul>
+  </div>
+</details>
+
+<div id="artifact-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="artifact-title"></h2>
+    <p>
+      <a id="github-link" href="#" target="_blank" class="modal-btn">View Source Code</a>
+    </p>
+    <p>
+      <a id="demo-link" href="#" target="_blank" class="modal-btn">Run Artifact</a>
+    </p>
+  </div>
+</div>
+
+<details class="fourth-detail">
+  <summary><h2 style="display:inline;">Enhancements</h2></summary>
+  <div class="collapsable-container">
+    <ul>
+      <li><a href="#" class="enhancement-link" data-enhancement="software">Software Engineering and Design</a></li>
+      <li><a href="#" class="enhancement-link" data-enhancement="algorithms">Algorithms and Data Structures</a></li>
+      <li><a href="#" class="enhancement-link" data-enhancement="databases">Databases</a></li>
+    </ul>
+  </div>
+</details>
+
+<div id="enhancement-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="enhancement-title"></h2>
+    <div id="enhancement-scrollbox" class="scroll-box"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

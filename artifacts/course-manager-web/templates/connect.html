@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect to MongoDB</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+    <h1>Connect to MongoDB</h1>
+
+    <div class="nav">
+        <a href="{{ url_for('index') }}">← Back to Courses</a>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash">
+          {% for msg in messages %}
+            <p>{{ msg }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" class="connect-form">
+        <label for="username">MongoDB Username:</label>
+        <input type="text" name="username" placeholder="Enter username">
+
+        <label for="password">MongoDB Password:</label>
+        <input type="password" name="password" placeholder="Enter password">
+
+        <label for="db_name">Database Name:</label>
+        <input type="text" name="db_name" placeholder="Enter database name">
+
+        <label for="collection_name">Collection Name:</label>
+        <input type="text" name="collection_name" placeholder="Enter collection name">
+
+        <button type="submit">Connect</button>
+    </form>
+</body>
+</html>
